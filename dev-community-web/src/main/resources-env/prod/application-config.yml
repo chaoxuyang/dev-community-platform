@@ -1,0 +1,24 @@
+view:
+  site:
+    wxPayEnable: ${wx.pay.enable:false}
+    needLoginArticleReadCount: 30
+    zsxqArticleReadCount: 20
+    needPayArticleReadCount: 20
+    websiteName: 开发者技术社区平台
+    websiteLogoUrl: /img/logo.svg
+    websiteFaviconIconUrl: /img/icon.png
+    contactMeTitle: 联系管理员
+    contactMeWxQrCode:
+    contactMeStarQrCode:
+    pageSize: 20
+    cdnImgStyle:
+    websiteRecord:
+    wxLoginUrl:
+    host: https://your-domain.example.com
+    welcomeInfo: 欢迎来到开发者技术社区平台
+    zsxqUrl:
+    zsxqPosterUrl:
+    oss:
+
+knife4j:
+  production: true

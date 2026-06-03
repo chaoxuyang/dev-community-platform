@@ -1,0 +1,116 @@
+server:
+  port: 8080
+  servlet:
+    session:
+      timeout: 5m
+  compression:
+    enabled: true
+    min-response-size: 2KB
+
+spring:
+  devtools:
+    restart:
+      enabled: true
+    livereload:
+      enabled: true
+    additional-paths: src/main/resources/static/**
+  application:
+    name: dev-community-platform
+  config:
+    import: application-dal.yml,application-web.yml,application-config.yml,application-image.yml,application-email.yml,application-rabbitmq.yml,application-ai.yml,application-pay.yml,application-login.yml
+  main:
+    allow-bean-definition-overriding: true
+    allow-circular-references: true
+  mvc:
+    async:
+      request-timeout:
+  liquibase:
+    change-log: classpath:liquibase/master.xml
+    enabled: true
+  servlet:
+    multipart:
+      enabled: true
+      max-file-size: 5MB
+      max-request-size: 10MB
+
+servlet:
+  tomcat:
+    max-swallow-size: -1
+
+security:
+  salt: dev_community_salt
+  salt-index: 3
+
+paicoding:
+  sensitive:
+    enable: true
+    deny:
+    allow: 中国,公司,用户,系统,开发,架构,数据库,缓存,搜索
+  jwt:
+    issuer: dev_community_platform
+    secret: hello_world
+    expire: 432000000
+  openapi:
+    app-ids: test-app
+    ip-white-list: 0.0.0.0/0
+    oc-login-redirect-url: http://localhost:8087/api/wx/pai/callback
+
+database:
+  name: dev_community
+
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+
+knife4j:
+  enable: true
+  setting:
+    language: zh-CN
+  openapi:
+    title: 开发者技术社区平台
+    description: 面向开发者内容创作与交流场景的社区平台，支持文章发布、评论点赞、消息通知、搜索检索、登录认证和后台管理。
+    version: 1.0.0
+    concat:
+      - Developer Community Platform
+      - https://your-domain.example.com
+      - https://github.com/your-name/dev-community-platform
+    license: Apache License 2.0
+    license-url: https://www.apache.org/licenses/LICENSE-2.0.html
+    email: admin@example.com
+    group:
+      admin:
+        group-name: 后台接口分组
+        api-rule: package
+        api-rule-resources:
+          - com.devcommunity.platform.web.admin
+      front:
+        group-name: 前台接口分组
+        api-rule: package
+        api-rule-resources:
+          - com.devcommunity.platform.web.front
+
+logging:
+  level:
+    com.devcommunity.platform.service.rank.service.impl.*: debug
+    org:
+      springframework:
+        web:
+          servlet:
+            handler.*: info
+
+management:
+  server:
+    address: 127.0.0.1
+    port: 8999
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+  metrics:
+    tags:
+      application: ${spring.application.name}
+  health:
+    elasticsearch:
+      enabled: false
+    mail:
+      enabled: false

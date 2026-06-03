@@ -1,0 +1,18 @@
+log:
+  path: /home/admin/workspace/dev-community-platform/logs
+env:
+  name: prod
+
+spring:
+  thymeleaf:
+    mode: HTML
+    encoding: UTF-8
+    servlet:
+      content-type: text/html
+    cache: true
+
+chatgpt:
+  key:
+
+short-link:
+  whitelist: localhost,127.0.0.1:8080,your-domain.example.com

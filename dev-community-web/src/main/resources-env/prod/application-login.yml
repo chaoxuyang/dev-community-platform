@@ -1,0 +1,15 @@
+paicoding:
+  login:
+    zsxq:
+      api: https://wx.zsxq.com/connector/crm/identify_member.html
+      appId: 666
+      groupNumber: 666
+      secret: 666
+      redirectUrl: https://your-domain.example.com/login/zsxq/callback
+    wx:
+      loginQrType: SERVICE_ACCOUNT
+      appId: your-wx-app-id
+      appSecret: your-wx-app-secret
+      qrCodeImg: ${view.site.contactMeWxQrCode}
+      qrCodeLogo: ${view.site.websiteLogoUrl}
+      securityCheckToken:

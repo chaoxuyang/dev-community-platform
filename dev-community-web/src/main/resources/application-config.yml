@@ -1,0 +1,22 @@
+view:
+  site:
+    wxPayEnable: ${wx.pay.enable:false}
+    needLoginArticleReadCount: 30
+    zsxqArticleReadCount: 20
+    needPayArticleReadCount: 20
+    websiteName: 开发者技术社区平台
+    websiteLogoUrl: /img/logo.svg
+    websiteFaviconIconUrl: /img/icon.png
+    zsxqUrl:
+    zsxqPosterUrl:
+    contactMeTitle: 联系管理员
+    contactMeWxQrCode:
+    contactMeStarQrCode:
+    pageSize: 20
+    cdnImgStyle:
+    websiteRecord:
+    wxLoginUrl:
+    host: http://127.0.0.1:${server.port}
+    welcomeInfo: 欢迎来到开发者技术社区平台
+    columnInfoNews: 欢迎来到技术专栏频道，这里汇总高质量开发实践与架构内容。
+    oss:

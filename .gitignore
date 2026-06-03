@@ -1,0 +1,55 @@
+# Build outputs
+target/
+build/
+out/
+*.class
+*.jar
+*.war
+*.ear
+
+# Maven
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+
+# Logs
+/logs/
+*.log
+pid.log
+
+# IDE files
+/.idea/
+/.vscode/
+*.iws
+*.iml
+*.ipr
+.classpath
+.factorypath
+.project
+.settings/
+.springBeans
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Local agent/editor files
+/.claude/
+/.qoder/
+/AGENTS.md
+/CLAUDE.md
+/GEMINI.md
+
+# Local helper files from the original template
+/docs/
+/guide.html
+/image.md
+/list.ser
+/urls.txt
+/add_dict_data.sh
+/deploy.sh
+/launch.sh
+
+# Local certificates and private config
+dev-community-web/src/main/resources/cert/
+*.pem
+*.key
